@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="form-inline">
+    <label>Email:</label>
+    <input class="form-control" type="email" placeholder="Email here..." [(ngModel)]="email">
+    <label>Password:</label>
+    <input class="form-control" type="password" placeholder="Secure pwd here..." [(ngModel)]="password">
+    <button class="btn btn-primary"(click)="login()">
+      <i class="fa fa-floppy-o" aria-hidden="true"></i>
+      Login
+    </button>
+      <a routerLink="/users">Registro</a>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    {{phone.name}}
+    <a class="pull-right" routerLink="/phones">
+      Back
+    </a>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <tr>
+        <th>Price</th>
+        <td>${{phone.price}}</td>
+      </tr>
+      <tr>
+        <th>Manufacturer</th>
+        <td>{{phone.manufacturer}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
