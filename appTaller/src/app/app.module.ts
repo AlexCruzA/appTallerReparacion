@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { PhoneService } from './phone.service';
 import { LoginService } from './login.service';
 import { UserService } from './user.service';
+import { RepuestoService } from './repuesto.service';
 
 
 import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
@@ -37,6 +38,7 @@ import { RepuestosCrudComponent } from './repuestos-crud/repuestos-crud.componen
   providers: [
     PhoneService,
     LoginService,
+    RepuestoService,
     UserService
   ],
   bootstrap: [AppComponent]

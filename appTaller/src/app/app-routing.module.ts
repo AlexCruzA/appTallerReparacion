@@ -3,17 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PhonesCrudComponent } from './phones-crud/phones-crud.component';
 import { UsersCrudComponent } from './users-crud/users-crud.component';
+import { RepuestosCrudComponent } from './repuestos-crud/repuestos-crud.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
-//import { RegistroComponent } from './registro/registro.component';
 
 
 const routes: Routes = [
-  //{ path: 'registro', component: RegistroComponent },
   { path: '', component: LoginComponent },
   { path: 'phones', component: PhonesCrudComponent },
   { path: 'users', component: UsersCrudComponent },
+  { path: 'repuestos', component: RepuestosCrudComponent },
   { path: 'phones/:id', component: PhoneDetailComponent },
   { path: 'home', component: HomeComponent }
 ];

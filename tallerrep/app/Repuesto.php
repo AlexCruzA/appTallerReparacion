@@ -17,6 +17,6 @@ class Repuesto extends Model
       }
       return self::where('nombre', 'ilike', "%$query%")
                   ->orWhere('marca', 'ilike', "%$query%")
-                  ->orWhere('descripcion', '=', intval($query))->get();
+                  ->orWhere('descripcion', 'ilike', "%$query%");
     }
 }
