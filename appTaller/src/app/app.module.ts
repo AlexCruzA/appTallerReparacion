@@ -11,6 +11,8 @@ import { PhoneService } from './phone.service';
 import { LoginService } from './login.service';
 import { UserService } from './user.service';
 import { RepuestoService } from './repuesto.service';
+import { ClienteService } from './cliente.service';
+
 
 
 import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
@@ -18,6 +20,7 @@ import { HttpModule } from '@angular/http';
 import { LoginComponent } from './login/login.component';
 import { UsersCrudComponent } from './users-crud/users-crud.component';
 import { RepuestosCrudComponent } from './repuestos-crud/repuestos-crud.component';
+import { ClientesCrudComponent } from './clientes-crud/clientes-crud.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { RepuestosCrudComponent } from './repuestos-crud/repuestos-crud.componen
     PhoneDetailComponent,
     LoginComponent,
     UsersCrudComponent,
-    RepuestosCrudComponent
+    RepuestosCrudComponent,
+    ClientesCrudComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,7 @@ import { RepuestosCrudComponent } from './repuestos-crud/repuestos-crud.componen
     PhoneService,
     LoginService,
     RepuestoService,
+    ClienteService,
     UserService
   ],
   bootstrap: [AppComponent]

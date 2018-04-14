@@ -21,6 +21,7 @@ Route::group(['middleware' => 'jwt.auth'], function(){
   Route::resource('phones', 'PhoneController');
   Route::resource('users', 'UserController');
   Route::resource('repuestos', 'RepuestoController');
+  Route::resource('clientes', 'ClienteController');
   Route::post('auth/logout', 'AuthController@logout');
 });
 

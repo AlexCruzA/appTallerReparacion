@@ -1,0 +1,60 @@
+<div class="container">
+  <legend>Clients</legend>
+  <div align="center" class="form-inline" *ngIf="crud_operation.is_visible">
+    <label>Name:</label>
+    <input class="form-control" type="text" placeholder="Raul..." [(ngModel)]="current_cliente.nombre">
+    <label>Phone:</label>
+    <input class="form-control" type="text" placeholder="81823443" [(ngModel)]="current_cliente.telefono">
+    <label>ID:</label>
+    <input class="form-control" type="text" placeholder="203210123" [(ngModel)]="current_cliente.cedula">
+    <label>Direction:</label>
+    <input class="form-control" type="text" placeholder="50m south..." [(ngModel)]="current_cliente.direccion">
+    <br>
+    <button class="btn btn-primary"(click)="save()">
+      <i class="fa fa-floppy-o" aria-hidden="true"></i>
+      Save
+    </button>
+    <button class="btn btn-default"(click)="crud_operation.is_visible = false">
+      <i class="fa fa-ban" aria-hidden="true"></i>
+      Cancel
+    </button>
+  </div>
+  <div class="form-inline">
+    <input class="form-control" type="search" placeholder="Search here.." [(ngModel)]="query">
+    <button class="form-control btn btn-primary" (click)="ngOnInit()">OK</button>
+  </div>
+  <table class="table table-striped table-hover">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>ID</th>
+      <th>Direction</th>
+      <th class="text-right">
+        <button class="btn btn-success" (click)="new()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        <button class="btn btn-info" (click)="ngOnInit()"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+      </th>
+    </tr>
+    <tr *ngFor="let row of data">
+      <td>{{row.nombre}}</td>
+      <td>{{row.telefono}}</td>
+      <td>${{row.cedula}}</td>
+      <td>${{row.direccion}}</td>
+      <td class="text-right">
+        <div *ngIf="!row.confirm">
+          <button class="btn btn-warning" (click)="edit(row)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+          <button class="btn btn-danger" (click)="row.confirm = true"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <a [routerLink]="['/clientes/', row.id]" class="btn btn-info">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div *ngIf="row.confirm">
+          <button class="btn btn-danger" (click)="row.confirm = false">Cancel</button>
+          <button class="btn btn-success" (click)="delete(row.id)">Confirm</button>
+        </div>
+      </td>
+    </tr>
+    <tr *ngIf="data.length == 0">
+      <td colspan="4" class="text-center">No data available</td>
+    </tr>
+  </table>
+</div>
