@@ -8,8 +8,6 @@ import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
 import { UsersCrudComponent } from './users-crud/users-crud.component';
 import { RepuestosCrudComponent } from './repuestos-crud/repuestos-crud.component';
 import { ClientesCrudComponent } from './clientes-crud/clientes-crud.component';
-import { OrdenesCrudComponent } from './ordenes-crud/ordenes-crud.component';
-import { OrdenDetailComponent } from './orden-detail/orden-detail.component';
 
 import { BoletaDetailComponent } from './boleta-detail/boleta-detail.component';
 import { BoletasCrudComponent } from './boletas-crud/boletas-crud.component';
@@ -24,9 +22,7 @@ const routes: Routes = [
   { path: 'phones', component: PhonesCrudComponent },
   { path: 'boletas', component: BoletasCrudComponent },
   { path: 'boletas/:id', component: BoletaDetailComponent },
-  { path: 'phones/:id', component: PhoneDetailComponent },
-  { path: 'ordenes/:id', component: OrdenDetailComponent },
-  { path: 'ordenes', component: OrdenesCrudComponent }
+  { path: 'phones/:id', component: PhoneDetailComponent }
 ];
 
 @NgModule({

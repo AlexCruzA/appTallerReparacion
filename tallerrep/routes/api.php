@@ -23,7 +23,6 @@ Route::group(['middleware' => 'jwt.auth'], function(){
   Route::resource('users', 'UserController');
   Route::resource('repuestos', 'RepuestoController');
   Route::resource('clientes', 'ClienteController');
-  Route::resource('ordenes', 'OrdenController');
   Route::post('auth/logout', 'AuthController@logout');
 });
 

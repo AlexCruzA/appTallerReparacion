@@ -12,12 +12,9 @@ import { LoginService } from './login.service';
 import { UserService } from './user.service';
 import { RepuestoService } from './repuesto.service';
 import { ClienteService } from './cliente.service';
-import { OrdenService } from './orden.service';
 
 import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
 import { PhonesCrudComponent } from './phones-crud/phones-crud.component';
-import { OrdenesCrudComponent } from './ordenes-crud/ordenes-crud.component';
-import { OrdenDetailComponent } from './orden-detail/orden-detail.component';
 import { HttpModule } from '@angular/http';
 import { LoginComponent } from './login/login.component';
 import { UsersCrudComponent } from './users-crud/users-crud.component';
@@ -36,8 +33,6 @@ import { BoletaDetailComponent } from './boleta-detail/boleta-detail.component';
     UsersCrudComponent,
     RepuestosCrudComponent,
     ClientesCrudComponent,
-    OrdenesCrudComponent,
-    OrdenDetailComponent,
     BoletasCrudComponent,
     BoletaDetailComponent
   ],
@@ -53,8 +48,7 @@ import { BoletaDetailComponent } from './boleta-detail/boleta-detail.component';
     RepuestoService,
     ClienteService,
     UserService,
-    BoletaService,
-    OrdenService
+    BoletaService
   ],
   bootstrap: [AppComponent]
 })
