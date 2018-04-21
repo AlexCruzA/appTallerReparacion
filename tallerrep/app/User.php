@@ -23,10 +23,10 @@ class User extends Authenticatable
       if (!$query) {
         return self::all();
       }
-      return self::where('name', 'ilike', "%$query%")
-                  ->orWhere('email', 'ilike', "%$query%")
-                  ->orWhere('password', 'ilike', "%$query%")
-                  ->orWhere('rol', 'ilike', "%$query%");
+      return self::where('name', 'like', "%$query%")
+                  ->orWhere('email', 'like', "%$query%")
+                  ->orWhere('password', 'like', "%$query%")
+                  ->orWhere('rol', 'like', "%$query%");
     }
 
     /**

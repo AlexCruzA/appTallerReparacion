@@ -1,0 +1,59 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    {{boleta.cliente}}
+    <a class="pull-right" routerLink="/boletas">
+      Back
+    </a>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <tr>
+        <th>Cliente</th>
+        <td>{{boleta.cliente}}</td>
+      </tr>
+      <tr>
+        <th>Tecnico</th>
+        <td>{{boleta.tecnico}}</td>
+      </tr>
+      <tr>
+        <th>Datos dispositivo</th>
+        <td>{{boleta.notaUno}}</td>
+      </tr>
+      <tr>
+        <th>Datos de reparación</th>
+        <td>{{boleta.notaDos}}</td>
+      </tr>
+      <tr>
+        <th>Fotos</th>
+        <td>{{boleta.fotos}}</td>
+      </tr>
+      <tr>
+        <th>Repuestos</th>
+        <td>{{boleta.repuestos}}</td>
+      </tr>
+      <tr>
+        <th>Estado</th>
+        <td>{{boleta.estado}}</td>
+      </tr>
+      <tr>
+        <th>Fecha Ingreso</th>
+        <td>{{boleta.fechaIngreso}}</td>
+      </tr>
+      <tr>
+        <th>Fecha Entrega</th>
+        <td>{{boleta.fechaEntrega}}</td>
+      </tr>
+      <tr>
+        <th>Costo</th>
+        <td>${{boleta.costo}}</td>
+      </tr>
+      <tr>
+        <th>Firma</th>
+        <td>{{boleta.firma}}</td>
+      </tr>
+    </table>
+  </div>
+  <button class="btn btn-info" onclick="window.print();">Print Order</button>
+</div>
+

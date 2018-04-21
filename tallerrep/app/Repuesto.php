@@ -15,8 +15,8 @@ class Repuesto extends Model
       if (!$query) {
         return self::all();
       }
-      return self::where('nombre', 'ilike', "%$query%")
-                  ->orWhere('marca', 'ilike', "%$query%")
-                  ->orWhere('descripcion', 'ilike', "%$query%");
+      return self::where('nombre', 'like', "%$query%")
+                  ->orWhere('marca', 'like', "%$query%")
+                  ->orWhere('descripcion', 'like', "%$query%");
     }
 }

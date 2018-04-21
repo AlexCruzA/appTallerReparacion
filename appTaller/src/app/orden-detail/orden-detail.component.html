@@ -1,0 +1,59 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    {{orden.cliente}}
+    <a class="pull-right" routerLink="/ordenes">
+      Back
+    </a>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <tr>
+        <th>Cliente</th>
+        <td>{{orden.cliente}}</td>
+      </tr>
+      <tr>
+        <th>Tecnico</th>
+        <td>{{orden.tecnico}}</td>
+      </tr>
+      <tr>
+        <th>Datos dispositivo</th>
+        <td>{{orden.notaUno}}</td>
+      </tr>
+      <tr>
+        <th>Datos de reparación</th>
+        <td>{{orden.notaDos}}</td>
+      </tr>
+      <tr>
+        <th>Fotos</th>
+        <td>{{orden.fotos}}</td>
+      </tr>
+      <tr>
+        <th>Repuestos</th>
+        <td>{{orden.repuestos}}</td>
+      </tr>
+      <tr>
+        <th>Estado</th>
+        <td>{{orden.estado}}</td>
+      </tr>
+      <tr>
+        <th>Fecha Ingreso</th>
+        <td>{{orden.fechaIngreso}}</td>
+      </tr>
+      <tr>
+        <th>Fecha Entrega</th>
+        <td>{{orden.fechaEntrega}}</td>
+      </tr>
+      <tr>
+        <th>Costo</th>
+        <td>${{orden.costo}}</td>
+      </tr>
+      <tr>
+        <th>Firma</th>
+        <td>{{orden.firma}}</td>
+      </tr>
+    </table>
+  </div>
+  <button class="btn btn-info" onclick="window.print();">Print Order</button>
+</div>
+

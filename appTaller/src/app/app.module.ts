@@ -4,23 +4,27 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { PhonesCrudComponent } from './phones-crud/phones-crud.component';
 import { HomeComponent } from './home/home.component';
 
 import { PhoneService } from './phone.service';
+import { BoletaService } from './boleta.service';
 import { LoginService } from './login.service';
 import { UserService } from './user.service';
 import { RepuestoService } from './repuesto.service';
 import { ClienteService } from './cliente.service';
-
-
+import { OrdenService } from './orden.service';
 
 import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
+import { PhonesCrudComponent } from './phones-crud/phones-crud.component';
+import { OrdenesCrudComponent } from './ordenes-crud/ordenes-crud.component';
+import { OrdenDetailComponent } from './orden-detail/orden-detail.component';
 import { HttpModule } from '@angular/http';
 import { LoginComponent } from './login/login.component';
 import { UsersCrudComponent } from './users-crud/users-crud.component';
 import { RepuestosCrudComponent } from './repuestos-crud/repuestos-crud.component';
 import { ClientesCrudComponent } from './clientes-crud/clientes-crud.component';
+import { BoletasCrudComponent } from './boletas-crud/boletas-crud.component';
+import { BoletaDetailComponent } from './boleta-detail/boleta-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { ClientesCrudComponent } from './clientes-crud/clientes-crud.component';
     LoginComponent,
     UsersCrudComponent,
     RepuestosCrudComponent,
-    ClientesCrudComponent
+    ClientesCrudComponent,
+    OrdenesCrudComponent,
+    OrdenDetailComponent,
+    BoletasCrudComponent,
+    BoletaDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +52,9 @@ import { ClientesCrudComponent } from './clientes-crud/clientes-crud.component';
     LoginService,
     RepuestoService,
     ClienteService,
-    UserService
+    UserService,
+    BoletaService,
+    OrdenService
   ],
   bootstrap: [AppComponent]
 })

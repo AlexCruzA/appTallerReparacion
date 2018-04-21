@@ -19,9 +19,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => 'jwt.auth'], function(){
   Route::resource('phones', 'PhoneController');
+  Route::resource('boletas', 'BoletaController');
   Route::resource('users', 'UserController');
   Route::resource('repuestos', 'RepuestoController');
   Route::resource('clientes', 'ClienteController');
+  Route::resource('ordenes', 'OrdenController');
   Route::post('auth/logout', 'AuthController@logout');
 });
 

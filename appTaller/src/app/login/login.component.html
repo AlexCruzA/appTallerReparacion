@@ -4,7 +4,7 @@
     <input class="form-control" type="email" placeholder="Email here..." [(ngModel)]="email">
     <label>Password:</label>
     <input class="form-control" type="password" placeholder="Secure pwd here..." [(ngModel)]="password">
-    <button class="btn btn-primary"(click)="login()">
+    <button routerLink="/home" class="btn btn-primary"(click)="login()">
       <i class="fa fa-floppy-o" aria-hidden="true"></i>
       Login
     </button>
