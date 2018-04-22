@@ -5,50 +5,43 @@
     <select class="btn btn-default" [(ngModel)]="current_boleta.cliente">
       <option value="Pedro">Pedro</option>
 	  </select>
-
     <label>Tecnico:</label>
   	<select class="btn btn-default" [(ngModel)]="current_boleta.tecnico">
   	  <option value="Raul">Raul</option>
   	</select>
     <br><br>
-
-  	<label>Datos dispositivo:</label>
+  	<label>Datos ingreso:</label>
       <input class="form-control" type="text" placeholder="place notes here..." [(ngModel)]="current_boleta.notaUno">
     <br><br>
-
-  	<label>Datos de reparación:</label>
-  	<input type="text" placeholder="place notes here..." [(ngModel)]="current_boleta.notaDos">
-
-    <label for="imagen">Fotos:</label>
-    <input class="form-control" type="text" [(ngModel)]="current_boleta.fotos">
+    <label>Ingreso:</label>
+    <input type="date" placeholder="place notes here..." [(ngModel)]="current_boleta.fechaIngreso">
     <br><br>
-    
-    <label>Repuestos:</label>
-    <select class="btn btn-default" [(ngModel)]="current_boleta.repuestos">
-      <option value="Flex">Flex</option>
-    </select>
-
-    <label>Estado:</label>
+     <label>Estado:</label>
     <select class="btn btn-default" [(ngModel)]="current_boleta.estado">
       <option value="Recibido">Recibido</option>
       <option value="En Revisión">En Revisión</option>
       <option value="Entregado">Entregado</option>
     </select>
-
     <br><br>
-
-    <label>Ingreso:</label>
-    <input type="date" placeholder="place notes here..." [(ngModel)]="current_boleta.fechaIngreso">
-
+    <label><b><u>Datos de entrega de dispositivo</u></b></label>
+    <br><br>
     <label>Entrega:</label>
     <input type="date" placeholder="place notes here..." [(ngModel)]="current_boleta.fechaEntrega">
     <br><br>
-
+  	<label>Datos salida:</label>
+  	<input type="text" placeholder="place notes here..." [(ngModel)]="current_boleta.notaDos">
+    <br><br>
+    <label for="imagen">Fotos:</label>
+    <input class="form-control" type="text" name="imagen" [(ngModel)]="current_boleta.fotos">
+    <br><br>
+    <label>Repuestos:</label>
+    <select class="btn btn-default" [(ngModel)]="current_boleta.repuestos">
+      <option value="Flex">Flex</option>
+    </select>
+    <br><br>
     <label>Costo:</label>
     <input type="number" placeholder="place notes here..." [(ngModel)]="current_boleta.costo">
-
     <br><br>
-
     <label>Firma:</label>
     <input type="text" placeholder="sign here..." [(ngModel)]="current_boleta.firma">
     <br><br>
@@ -118,3 +111,75 @@
     </tr>
   </table>
 </div>
+
+
+<!--<div>
+  <div id="sketch">
+    <canvas id="paint"></canvas>
+  </div>
+
+  <div id="settings"> Colours
+    <button onclick="getColor('blue');">Blue</button>
+    <button onclick="getColor('red');">Red</button>
+    <button onclick="getColor('green');">Green</button>
+    <button onclick="getColor('white');">White</button>
+    <button onclick="getColor('#333333');">Eraser</button>
+  </div>
+
+  <div id="settings"> Brush Size
+    <button onclick="getSize('2');">Small</button>
+    <button onclick="getSize('5');">Med</button>
+    <button onclick="getSize('10');">Large</button>
+    <button onclick="getSize('20');">X Large</button>
+  </div>
+
+  <script type="text/javascript">
+    
+  var canvas = document.getElementById('paint');
+  var ctx = canvas.getContext('2d');
+   
+  var sketch = document.getElementById('sketch');
+  var sketch_style = getComputedStyle(sketch);
+  canvas.width = 500;
+  canvas.height = 250;
+
+  var mouse = {x: 0, y: 0};
+   
+  /* Mouse Capturing Work */
+  canvas.addEventListener('mousemove', function(e) {
+    mouse.x = e.pageX - this.offsetLeft;
+    mouse.y = e.pageY - this.offsetTop;
+  }, false);
+
+  /* Drawing on Paint App */
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+
+  ctx.strokeStyle = "red";
+  function getColor(colour){ctx.strokeStyle = colour;}
+
+  function getSize(size){ctx.lineWidth = size;}
+
+
+  //ctx.strokeStyle = 
+  //ctx.strokeStyle = document.settings.colour[1].value;
+   
+  canvas.addEventListener('mousedown', function(e) {
+      ctx.beginPath();
+      ctx.moveTo(mouse.x, mouse.y);
+   
+      canvas.addEventListener('mousemove', onPaint, false);
+  }, false);
+   
+  canvas.addEventListener('mouseup', function() {
+      canvas.removeEventListener('mousemove', onPaint, false);
+  }, false);
+   
+  var onPaint = function() {
+      ctx.lineTo(mouse.x, mouse.y);
+      ctx.stroke();
+  };
+
+  </script>
+</div>-->
+
